@@ -1,0 +1,45 @@
+name: projeto_medicina
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.6
+  go_router: ^7.1.1
+  google_fonts: ^5.0.0
+  url_launcher: ^6.1.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/home.png
+    - assets/kitchen/origin.png
+    - assets/kitchen/op1.png
+    - assets/kitchen/op2.png
+    - assets/kitchen/op3.png
+    - assets/kitchen/op4.png
+    - assets/room/origin.png
+    - assets/room/op1.png
+    - assets/room/op2.png
+    - assets/room/op3.png
+    - assets/room/op4.png
+    - assets/yard/origin.png
+    - assets/yard/op1.png
+    - assets/yard/op2.png
+    - assets/yard/op3.png
+    - assets/yard/op4.png
+    - assets/bedroom/origin.png
+    - assets/bedroom/op1.png
+    - assets/bedroom/op2.png
+    - assets/bedroom/op3.png
+    - assets/bedroom/op4.png
