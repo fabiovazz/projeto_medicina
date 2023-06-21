@@ -174,28 +174,28 @@ class _RoomDangerState extends State<RoomDanger> {
                       showDialog<String>(
                           context: context,
                           builder: (BuildContext context) => AlertDialog(
-                                title: Text(
-                                    options[0] == true ? "Parabéns" : "Ops!"),
-                                content: SingleChildScrollView(
-                                  child: ListBody(
-                                    children: <Widget>[
-                                      Text(options[0] == true
-                                          ? 'Você encontrou o perigo!'
-                                          : 'Você não encontrou o perigo'),
-                                    ],
-                                  ),
-                                ),
-                                actions: <Widget>[
-                                  TextButton(
-                                    child: const Text('Próximo'),
-                                    onPressed: () {
-                                      if (options.contains(true)) {
-                                        context.go('/bedroom');
-                                      }
-                                    },
-                                  ),
+                            title: Text(options[0] == true ? "Parabéns" : "Ops!"),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: <Widget>[
+                                  Text(options[0] == true
+                                      ? 'Você encontrou o perigo!'
+                                      : 'Você não encontrou o perigo'),
                                 ],
-                              ));
+                              ),
+                            ),
+                            actions: options[0] == true
+                                ? <Widget>[
+                                    TextButton(
+                                      child: const Text('Próximo'),
+                                      onPressed: () {
+                                        context.go('/bedroom');
+                                      },
+                                    ),
+                                  ]
+                                : null,
+                          ),
+                        );
                     }
                   },
                   icon: const Icon(Icons.arrow_forward),

@@ -183,14 +183,16 @@ class _KitchenDangerState extends State<KitchenDanger> {
                               ],
                             ),
                           ),
-                          actions: <Widget>[
-                            TextButton(
-                              child: const Text('Próximo'),
-                              onPressed: () {
-                                context.go('/yard');
-                              },
-                            ),
-                          ],
+                          actions: options[2] == true
+                              ? <Widget>[
+                                  TextButton(
+                                    child: const Text('Próximo'),
+                                    onPressed: () {
+                                      context.go('/yard');
+                                    },
+                                  ),
+                                ]
+                              : null,
                         ),
                       );
                     }

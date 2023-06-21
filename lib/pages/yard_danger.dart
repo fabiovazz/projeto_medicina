@@ -184,16 +184,17 @@ class _YardDangerState extends State<YardDanger> {
                               ],
                             ),
                           ),
-                          actions: <Widget>[
-                            TextButton(
-                              child: const Text('Próximo'),
-                              onPressed: () {
-                                context.go('/room');
-                              },
-                            ),
-                          ],
-                        ),
-                      );
+                          actions: options[3] == true
+                              ? <Widget>[
+                                  TextButton(
+                                    child: const Text('Próximo'),
+                                    onPressed: () {
+                                      context.go('/room');
+                                    },
+                                  ),
+                                ]
+                              : null,
+                        ));
                     }
                   },
                   icon: const Icon(Icons.arrow_forward),
