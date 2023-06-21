@@ -184,14 +184,16 @@ class _BedroomDangerState extends State<BedroomDanger> {
                               ],
                             ),
                           ),
-                          actions: <Widget>[
-                            TextButton(
-                              child: const Text('Próximo'),
-                              onPressed: () {
-                                context.go('/');
-                              },
-                            ),
-                          ],
+                          actions: options[0] == true
+                              ? <Widget>[
+                                  TextButton(
+                                    child: const Text('Próximo'),
+                                    onPressed: () {
+                                      context.go('/');
+                                    },
+                                  ),
+                                ]
+                              : null,
                         ),
                       );
                     }
